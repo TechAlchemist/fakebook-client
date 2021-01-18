@@ -1,0 +1,9 @@
+.page-title {
+    margin: 10px;
+    display: flex;
+    justify-content: center !important;
+}
+
+.page-title > h1 {
+    font-size: 4rem;
+}

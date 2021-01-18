@@ -5,13 +5,15 @@ import { Grid } from 'semantic-ui-react';
 
 import PostCard from '../Components/PostCard';
 
+import '../App.css';
+
 function Home() {
 
     const { loading, data: {getPosts: posts} } = useQuery(FETCH_POSTS_QUERY);
 
     return (
-        <Grid columns={1} divided>
-            <Grid.Row>
+        <Grid columns={1} >
+            <Grid.Row className="page-title">
                 <h1> Recent Posts</h1>
             </Grid.Row>
             <Grid.Row>
@@ -39,6 +41,7 @@ const FETCH_POSTS_QUERY = gql`
                 createdAt
                 body
             }
+            commentCount
         }
     }
 `;
