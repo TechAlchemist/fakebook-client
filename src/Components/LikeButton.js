@@ -6,11 +6,16 @@ import { Button, Label, Icon } from 'semantic-ui-react';
 
 import MyPopup from '../util/MyPopup';
 
-function LikeButton({ user, post: { id, likeCount, likes } }) {
+function LikeButton(props) {
+
+  let user = props.user;
+  let id = props.id;
+  let likes = props.likes;
+  let likeCount = props.likeCount;
   const [liked, setLiked] = useState(false);
 
   useEffect(() => {
-    if (user && likes.find((like) => like.username === user.username)) {
+    if (user && likes && likes.find((like) => like.username === user.username)) {
       setLiked(true);
     } else setLiked(false);
   }, [user, likes]);
@@ -21,8 +26,8 @@ function LikeButton({ user, post: { id, likeCount, likes } }) {
 
   const likeButton = user ? (
     liked ? (
-      <Button color="red">
-        <Icon name="like" />
+      <Button color="teal">
+        <Icon name="heart" />
       </Button>
     ) : (
       <Button color="teal" basic>
