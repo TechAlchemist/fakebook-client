@@ -29,13 +29,13 @@ Fakebook is a social media app created to learn and implement GraphQL in a fulls
 
 ### Homepage
 
-![Homepage](/screenshots/homepage_screnshot.png)
+![Homepage](./screenshots/homepage_screnshot.png)
 
 ---
 
 ### Single Post page
 
-![Single Post Page](/screenshots/homepage_screnshot.png)
+![Single Post Page](./screenshots/homepage_screnshot.png)
 
 ## Deploy the Project
 
