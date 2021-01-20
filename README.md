@@ -21,14 +21,24 @@ Fakebook is a social media app created to learn and implement GraphQL in a fulls
 - Persist Images
 - Edit comments and statuses
 
-## ERD
-
 ---
 
 ## Screenshots
 
 ---
 
+### Homepage
+
+![Homepage](/screenshots/homepage_screnshot.png)
+
+---
+
+### Single Post page
+
+![Single Post Page](/screenshots/homepage_screnshot.png)
+
 ## Deploy the Project
 
 ---
+
+[Deploy Application](https://fakebook-ql.herokuapp.com/)
