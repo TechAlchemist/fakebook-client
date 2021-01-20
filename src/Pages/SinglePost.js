@@ -29,6 +29,7 @@ function SinglePost(props) {
       createdAt
       username
       likeCount
+      profilePicture
       likes {
         username
       }
@@ -93,6 +94,7 @@ const SUBMIT_COMMENT_MUTATION = gql`
       createdAt,
       username,
       comments,
+      profilePicture,
       likes,
       likeCount,
       commentCount
@@ -103,7 +105,7 @@ const SUBMIT_COMMENT_MUTATION = gql`
     <Grid.Row>
       <Grid.Column width={2}>
         <Image
-          src="https://react.semantic-ui.com/images/avatar/large/molly.png"
+          src={profilePicture}
           size="small"
           float="right"
         />
@@ -160,7 +162,7 @@ const SUBMIT_COMMENT_MUTATION = gql`
                       />
                       <button
                         type="submit"
-                        className="ui button teal"
+                        className="ui button green"
                         disabled={comment.trim() === ''}
                         onClick={submitComment}
                       >

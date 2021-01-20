@@ -7,6 +7,7 @@ import { useForm } from '../util/hooks';
 import { FETCH_POSTS_QUERY } from '../util/graphql';
 
 function PostForm() {
+
   const { values, onChange, onSubmit } = useForm(createPostCallback, {
     body: ''
   });
@@ -46,7 +47,7 @@ function PostForm() {
             value={values.body}
             error={error ? true : false}
           />
-          <Button type="submit" color="red">
+          <Button type="submit" color="yellow" style={{marginBottom: 16}}>
             Submit
           </Button>
         </Form.Field>
@@ -64,16 +65,18 @@ function PostForm() {
 
 const CREATE_POST_MUTATION = gql`
   mutation createPost($body: String!) {
-    createPost(body: $body) {
+    createPost(body: $body ) {
       id
       body
       createdAt
       username
+      profilePicture
       likes {
         id
         username
         createdAt
       }
+      profilePicture
       likeCount
       comments {
         id
